@@ -42,15 +42,15 @@ if __name__=='__main__':
         if i == N - 1:
             break
 
-    # Test input movie reviews
+    # Test input subject reviews 
     input_reviews = [
-        'The costumes in this movie were great', 
-        'I think the story was terrible and the characters were very weak',
-        'People say that the director of the movie is amazing', 
-        'This is such an idiotic movie. I will not recommend it to anyone.' 
+        'This is my project of AI', 
+        'Our teacher has a very good knowledge of AI',
+        'This subject is so much related to Machine learning rather other branches of AI', 
+        'This is such an idiotic subject. I will not recommend it to anyone.' 
     ]
 
-    print("\nMovie review predictions:")
+    print("\nSubject review predictions:")
     for review in input_reviews:
         print("\nReview:", review)
 
