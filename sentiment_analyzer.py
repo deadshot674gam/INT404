@@ -42,20 +42,19 @@ if __name__=='__main__':
         if i == N - 1:
             break
 
-    # Test input subject reviews 
-    input_reviews = [
-        'This is my project of AI', 
-        'Our teacher has a very good knowledge of AI',
-        'This subject is so much related to Machine learning rather other branches of AI', 
-        'This is such an idiotic subject. I will not recommend it to anyone.' 
-    ]
+    a="yes"
+    while a=="yes" or a=="Yes":
+        # Test input subject review
+        print("Enter a string for analysis:")
 
-    print("\nSubject review predictions:")
-    for review in input_reviews:
-        print("\nReview:", review)
+        input_string=input()
+
+        print("\nString predictions:")
+    
+        print("\nString:", input_string)
 
         # Compute the probabilities
-        probabilities = classifier.prob_classify(extract_features(review.split()))
+        probabilities = classifier.prob_classify(extract_features(input_string.split()))
 
         # Pick the maximum value
         predicted_sentiment = probabilities.max()
@@ -63,4 +62,4 @@ if __name__=='__main__':
         # Print outputs
         print("Predicted sentiment:", predicted_sentiment)
         print("Probability:", round(probabilities.prob(predicted_sentiment), 2))
-
+        a=input("Want to check another string:(Enter yes or no)")
